@@ -17,20 +17,20 @@
   border-radius: 10px;
 }
 
-.elements__card_item {
+.elements__card-item {
   width: 282px;
   height: 282px;
   display: flex;
 }
 
-.elements__card_info {
+.elements__card-info {
   display: flex;
   margin: 0;
   padding: 25px 15px 31px 21px;
   justify-content: space-between;
   align-items: center;
 }
-.elements__card_title {
+.elements__card-title {
   width: 246px;
   font-family: "Inter";
   font-weight: 900;
@@ -43,7 +43,7 @@
   overflow: hidden;
 }
 
-.elements__card_image {
+.elements__card-image {
   width: 21px;
   height: 19px;
 }
@@ -71,16 +71,16 @@
     margin: 0 auto;
   }
 
-  .elements__card_item {
+  .elements__card-item {
     width: 100%;
     height: auto;
   }
 
-  .elements__card_info {
+  .elements__card-info {
     padding: 15px;
   }
 
-  .elements__card_title {
+  .elements__card-title {
     font-size: 18px;
     white-space: nowrap;
     overflow: hidden;
