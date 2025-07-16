@@ -41,7 +41,7 @@
             </div>
             <p class="profile__texts-subtitle">Explorador</p>
           </div>
-          <button class="profile__button-add">
+          <button class="profile__button-add" id="add-button">
             <img
               class="profile__button-add-plus"
               alt="Sinal de adicionar"
@@ -50,7 +50,7 @@
           </button>
         </section>
         <section class="elements">
-          <div class="elements__card">
+          <!-- <div class="elements__card">
             <img
               class="elements__card-item"
               alt="Vale de Yosemite"
@@ -139,14 +139,14 @@
                 src="./images/like.png"
               />
             </div>
-          </div>
+          </div> -->
         </section>
         <footer class="footer">© 2024 Around The U.S.</footer>
       </main>
     </div>
-    <div class="popup">
+    <div class="popup" id="edit-person-popup">
       <div class="popup__container">
-        <button class="popup__close-button">
+        <button class="popup__close-button" id="edit-close-button">
           <img
             class="popup__icon"
             src="./images/close_icon.png"
@@ -167,10 +167,56 @@
             type="text"
             placeholder="Sobre mim"
           />
-          <button class="popup__button-save">Salvar</button>
+          <button class="popup__button-save" id="edit-button-save">
+            Salvar
+          </button>
         </form>
       </div>
     </div>
+    <div class="popup" id="add-image-popup">
+      <div class="popup__container">
+        <button class="popup__close-button" id="add-close-button">
+          <img
+            class="popup__icon"
+            src="./images/close_icon.png"
+            alt="close button icon"
+          />
+        </button>
+        <h3 class="popup__title">Novo local</h3>
+        <form class="popup__field" name="add-popup" id="add-popup">
+          <input
+            id="local"
+            class="popup__input"
+            type="text"
+            placeholder="Título"
+          />
+          <input
+            id="link"
+            class="popup__input"
+            type="text"
+            placeholder="Link da imagem"
+          />
+          <button class="popup__button-save">Criar</button>
+        </form>
+      </div>
+    </div>
+    <template>
+      <div class="elements__card">
+        <img
+          class="elements__card-item"
+          alt="Vale de Yosemite"
+          src="./images/image1.png"
+        />
+        <div class="elements__card-info">
+          <h2 class="elements__card-title">Vale de Yosemite</h2>
+          <img
+            class="elements__card-image"
+            alt="like"
+            src="./images/like.png"
+          />
+        </div>
+      </div>
+    </template>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
