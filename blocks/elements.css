@@ -11,16 +11,20 @@
 }
 
 .elements__card {
+  position: relative;
   width: 282px;
   height: 361px;
   background-color: white;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .elements__card-item {
   width: 282px;
   height: 282px;
   display: flex;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .elements__card-info {
@@ -45,6 +49,37 @@
 
 .elements__card-image {
   width: 21px;
+  height: 19px;
+}
+
+.elements__card-like {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+}
+.elements__card-like:hover {
+  opacity: 50%;
+}
+.elements__card-trash {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.elements__card-trash:hover {
+  opacity: 60%;
+}
+
+.elements__card-trash-icon {
+  width: 18px;
   height: 19px;
 }
 
@@ -73,7 +108,7 @@
 
   .elements__card-item {
     width: 100%;
-    height: auto;
+    height: 282px;
   }
 
   .elements__card-info {

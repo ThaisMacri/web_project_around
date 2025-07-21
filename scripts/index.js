@@ -53,6 +53,24 @@ function createCard(card) {
   cardImage.src = card.link;
   cardImage.alt = card.name;
 
+  // Ajusta funcionalidade de curtir para o botão
+  const likeButton = newCardTemplate.querySelector(".elements__card-like");
+  const likeImg = likeButton.querySelector(".elements__card-image");
+
+  likeButton.addEventListener("click", function () {
+    if (likeImg.src.includes("like.png")) {
+      likeImg.src = "./images/active_like.png";
+    } else {
+      likeImg.src = "./images/like.png";
+    }
+  });
+
+  // Funcionalidade de remover card
+  const trashButton = newCardTemplate.querySelector(".elements__card-trash");
+  trashButton.addEventListener("click", function () {
+    newCardTemplate.remove();
+  });
+
   return newCardTemplate;
 }
 
