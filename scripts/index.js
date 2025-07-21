@@ -41,7 +41,7 @@ const initialCards = [
   },
 ];
 function createCard(card) {
-  //essa função cria um novo cartão de local, com titulo e foto carregada por um link
+  //essa função cria um novo cartão de local, com titulo e foto
   const newCardTemplate = cardTemplate
     .querySelector(".elements__card")
     .cloneNode(true);
@@ -49,18 +49,19 @@ function createCard(card) {
   const cardTitle = newCardTemplate.querySelector(".elements__card-title");
   cardTitle.textContent = card.name;
 
-  const cardImage = newCardTemplate.querySelector(".elements__card-image");
+  const cardImage = newCardTemplate.querySelector(".elements__card-item");
   cardImage.src = card.link;
+  cardImage.alt = card.name;
 
   return newCardTemplate;
 }
 
 function renderCard(card) {
-  cardsContainer.append(card);
+  cardsContainer.prepend(card);
 }
 
-for (const card of initialCards) {
-  const cardElement = createCard(card);
+for (let i = initialCards.length - 1; i >= 0; i--) {
+  const cardElement = createCard(initialCards[i]);
   renderCard(cardElement);
 }
 
@@ -82,7 +83,20 @@ function handleProfileFormSubmit(evt) {
 }
 
 function handleAddPlaceFormSubmit(evt) {
-  evt.preventDefault();
+  evt.preventDefault(); //o prevent.Default() é utilizado para a pagina nao atualizar quando enviar o formulario
+  const name = popupInputLocal.value;
+  const link = popupInputLink.value;
+
+  const newCard = { name, link };
+
+  const cardElement = createCard(newCard);
+
+  renderCard(cardElement);
+
+  addPopup.classList.remove("popup_display_flex");
+
+  popupInputLocal.value = "";
+  popupInputLink.value = "";
 }
 
 formElement.addEventListener("submit", handleProfileFormSubmit);
