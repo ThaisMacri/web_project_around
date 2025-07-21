@@ -89,7 +89,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 425px) {
   .elements {
     width: 100%;
     justify-content: center;

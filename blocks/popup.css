@@ -109,7 +109,7 @@
     font-size: 14px;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 425px) {
   .popup {
     max-width: 320px;
   }
