@@ -25,6 +25,11 @@
   display: flex;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  cursor: pointer;
+}
+
+.elements__card-item:hover {
+  opacity: 0.8;
 }
 
 .elements__card-info {

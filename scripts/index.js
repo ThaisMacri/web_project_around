@@ -4,6 +4,9 @@ const editPopup = document.querySelector("#edit-person-popup");
 const addPopup = document.querySelector("#add-image-popup");
 const editPopupCloseButton = document.querySelector("#edit-close-button");
 const addPopupCloseButton = document.querySelector("#add-close-button");
+const imagePopup = document.querySelector("#image-popup");
+const imagePopupCloseButton = document.querySelector("#image-close-button");
+const popupImage = document.querySelector(".popup__image");
 const profileTextTitle = document.querySelector(".profile__texts-title");
 const profileTextSubitle = document.querySelector(".profile__texts-subtitle");
 const popupInputName = document.querySelector("#name");
@@ -52,6 +55,13 @@ function createCard(card) {
   const cardImage = newCardTemplate.querySelector(".elements__card-item");
   cardImage.src = card.link;
   cardImage.alt = card.name;
+
+  // Funcionalidade de visualização da imagem em tamanho maior
+  cardImage.addEventListener("click", function () {
+    popupImage.src = card.link;
+    popupImage.alt = card.name;
+    imagePopup.classList.add("popup_display_flex");
+  });
 
   // Ajusta funcionalidade de curtir para o botão
   const likeButton = newCardTemplate.querySelector(".elements__card-like");
@@ -127,4 +137,15 @@ addButton.addEventListener("click", function () {
 
 addPopupCloseButton.addEventListener("click", function () {
   addPopup.classList.remove("popup_display_flex");
+});
+
+imagePopupCloseButton.addEventListener("click", function () {
+  imagePopup.classList.remove("popup_display_flex");
+});
+
+// Fechar popup de imagem ao clicar fora da imagem
+imagePopup.addEventListener("click", function (evt) {
+  if (evt.target === imagePopup) {
+    imagePopup.classList.remove("popup_display_flex");
+  }
 });
