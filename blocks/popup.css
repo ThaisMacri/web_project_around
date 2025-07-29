@@ -13,7 +13,6 @@
   display: flex;
 }
 .popup__container {
-  display: flex;
   background-color: white;
   width: 430px;
   border-radius: 10px;
@@ -93,7 +92,7 @@
 
 .popup__image {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 75vh;
   object-fit: cover;
   border-radius: 10px;
 }
