@@ -131,6 +131,9 @@
     height: 46px;
     font-size: 14px;
   }
+  .popup__image-title {
+    bottom: 0;
+  }
 }
 @media screen and (max-width: 320px) {
   .popup {
