@@ -28,10 +28,6 @@
   cursor: pointer;
 }
 
-.elements__card-item:hover {
-  opacity: 0.8;
-}
-
 .elements__card-info {
   display: flex;
   margin: 0;

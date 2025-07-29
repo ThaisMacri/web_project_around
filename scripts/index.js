@@ -17,6 +17,7 @@ const formElement = document.querySelector(".popup__field");
 const cardTemplate = document.querySelector("template").content;
 const addPlaceForm = document.querySelector("#add-popup");
 const cardsContainer = document.querySelector(".elements");
+const popupImageTitle = document.querySelector(".popup__image-title");
 const initialCards = [
   {
     name: "Vale de Yosemite",
@@ -61,6 +62,7 @@ function createCard(card) {
     popupImage.src = card.link;
     popupImage.alt = card.name;
     imagePopup.classList.add("popup_display_flex");
+    popupImageTitle.textContent = card.name;
   });
 
   // Ajusta funcionalidade de curtir para o botão
@@ -88,7 +90,7 @@ function renderCard(card) {
   cardsContainer.prepend(card);
 }
 
-for (let i = initialCards.length - 1; i >= 0; i--) {
+for (let i = 0; i < initialCards.length; i++) {
   const cardElement = createCard(initialCards[i]);
   renderCard(cardElement);
 }
